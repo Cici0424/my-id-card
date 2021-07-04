@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cici的个人小名片</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?yox1tg');
+            src: url('fonts/icomoon.eot?yox1tg#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?yox1tg') format('truetype'), url('fonts/icomoon.woff?yox1tg') format('woff'), url('fonts/icomoon.svg?yox1tg#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+        
+        .box {
+            width: 820px;
+            height: 580px;
+            margin: 100px auto;
+            border-radius: 20px;
+            box-shadow: rgba(29, 29, 29, 0.5) 1px 1px 8px 1px;
+        }
+        
+        .header {
+            width: 100%;
+            height: 180px;
+            background-color: #fffde4;
+            border-top: 5px solid #b1ca57;
+            border-radius: 20px 20px 20px 20px;
+        }
+        
+        .myname h1 {
+            text-align: right;
+            padding: 25px 40px 5px 20px;
+            font-weight: 600px;
+            font-size: 27px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .myname h3 {
+            text-align: right;
+            color: #B1B1AC;
+            font-size: 18px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 0 40px 10px 0px;
+        }
+        
+        .header hr {
+            width: 550px;
+            padding-right: 40px;
+            border: 0.5px solid #b1ca57;
+            position: absolute;
+            right: 375px;
+        }
+        
+        .header .phone {
+            float: right;
+            margin-right: 24px;
+            vertical-align: middle;
+        }
+        
+        .header .phone i {
+            float: left;
+            font-family: 'icomoon';
+            padding: 13px 10px 10px 0;
+        }
+        
+        .header .phone span {
+            float: left;
+            font-size: 15px;
+            padding: 10px 16px 10px 0;
+        }
+        
+        .header .photo {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background-color: transparent;
+        }
+        
+        .photo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10%;
+            margin: -50px 0 0 50px;
+        }
+        
+        .biaoqian ul {
+            position: fixed;
+            right: 335px;
+            top: 240px;
+        }
+        
+        .biaoqian ul li {
+            float: left;
+            list-style: none;
+            margin: 5px 42px 1px 16px;
+        }
+        
+        .biaoqian ul li a {
+            font-size: 16px;
+            font-weight: 800;
+            color: #fac423;
+            text-decoration: none;
+        }
+        
+        .biaoqian ul li a:hover {
+            color: rgb(42, 21, 231);
+        }
+        
+        .box .body {
+            display: flex;
+            width: 100%;
+            height: 400px;
+            flex-direction: column;
+            background-color: #b1ca57;
+            border-radius: 0px 0px 20px 20px;
+        }
+        
+        .shangmian {
+            flex: 1;
+            background-color: #b1ca57;
+            /* height: 100px; */
+            width: 730px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+        
+        .shangmian .zuo {
+            position: relative;
+            width: 110px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            align-self: flex-start;
+            line-height: 40px;
+            text-align: center;
+            border-bottom: 2px solid #b1ca57;
+        }
+        
+        .shangmian .zuo span {
+            position: absolute;
+            width: 0;
+            height: 0;
+            right: -50px;
+            top: 0;
+            border-bottom: 40px solid rgb(255, 255, 255);
+            border-right: 50px solid transparent;
+        }
+        
+        .shangmian .zuo p {
+            font-size: 15px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .shangmian .you {
+            width: 240px;
+            height: 50px;
+            margin-top: 8px;
+            margin-right: -6px;
+            align-self: flex-end;
+        }
+        
+        .shangmian .you i {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500px;
+            font-family: 'icomoon';
+            padding: 5px 0px 10px 23px;
+            height: 50px;
+            line-height: 50px;
+        }
+        
+        .xiamian {
+            flex: 3;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            background-color: rgb(255, 255, 255);
+            width: 730px;
+            margin: 0 auto 40px;
+        }
+        
+        .xiamian span {
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: -131px;
+            right: 357px;
+            border: 18px solid transparent;
+            border-bottom-color: #b1ca57;
+        }
+        
+        .xiamian .contain1 {
+            width: 300px;
+            height: 260px;
+            background-color: rgb(250, 243, 141);
+        }
+        
+        .xiamian .contain2 {
+            height: 260px;
+            width: 250px;
+            background-color: #fffde4;
+        }
+        
+        .xiamian .contain3 {
+            width: 180px;
+            height: 260px;
+            background-color: rgb(250, 243, 141);
+        }
+    </style>
+    <script>
+        var mythought = prompt('是否要查看Cici的个人名片');
+        alert(mythought);
+    </script>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="header">
+            <div class="myname">
+                <h1>张纯婷 Cici</h1>
+                <h3>ZHANG CHUN TING</h3>
+            </div>
+            <hr>
+            <div class="phone">
+                <i></i>
+                <span>: 18319833288</span>
+            </div>
+            <div class="biaoqian">
+                <ul>
+                    <li>
+                        <a href="#">HOME</a></li>
+                    <li>
+                        <a href="#">FAVOR</a></li>
+                    <li>
+                        <a href="#">PLAN</a></li>
+                    <li>
+                        <a href="#">CONTAIN</a></li>
+                </ul>
+            </div>
+            <!-- <span>:Cici010424</span> -->
+            <div class="photo">
+                <img src="cici.jpg" alt="">
+            </div>
+        </div>
+        <div class="body">
+            <div class="shangmian">
+                <div class="you">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <div class="zuo">
+                    <p>About Me</p>
+                    <span> </span>
+                </div>
+            </div>
+            <div class="xiamian">
+                <span></span>
+                <div class="contain1">正文内容</div>
+                <div class="contain2">待思考</div>
+                <div class="contain3">待思考</div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+</body>
+
+</html>
